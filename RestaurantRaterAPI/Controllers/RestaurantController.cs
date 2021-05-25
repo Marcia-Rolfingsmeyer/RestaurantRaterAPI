@@ -65,8 +65,8 @@ namespace RestaurantRaterAPI.Controllers
                 {
                     restaurant.Name = updatedRestaurant.Name; // updating values
                     restaurant.Address = updatedRestaurant.Address;
-                    restaurant.Rating = updatedRestaurant.Rating; // then we have to make them stick (await)
-
+                    
+                    // then we have to make them stick (await)
                     await _context.SaveChangesAsync();
                     return Ok();
                 }
@@ -94,6 +94,5 @@ namespace RestaurantRaterAPI.Controllers
             }
             return InternalServerError();
         }
-
     }
 }

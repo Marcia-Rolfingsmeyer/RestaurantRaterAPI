@@ -89,3 +89,4 @@ C:\Users\marci\Google Drive\x,Personal\ElevenFiftyProjects\DotNetProjects\Restau
 C:\Users\marci\Google Drive\x,Personal\ElevenFiftyProjects\DotNetProjects\RestaurantRaterAPI\RestaurantRaterAPI\obj\Debug\RestaurantRaterAPI.pdb
 C:\Users\marci\Google Drive\x,Personal\ElevenFiftyProjects\DotNetProjects\RestaurantRaterAPI\RestaurantRaterAPI\obj\Debug\RestaurantRaterAPI.Migrations.InitialMigration.resources
 C:\Users\marci\Google Drive\x,Personal\ElevenFiftyProjects\DotNetProjects\RestaurantRaterAPI\RestaurantRaterAPI\obj\Debug\RestaurantRaterAPI.csproj.GenerateResource.cache
+C:\Users\marci\Google Drive\x,Personal\ElevenFiftyProjects\DotNetProjects\RestaurantRaterAPI\RestaurantRaterAPI\obj\Debug\RestaurantRaterAPI.Migrations.AddedRatingTable.resources
