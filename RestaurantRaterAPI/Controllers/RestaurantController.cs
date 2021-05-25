@@ -54,7 +54,46 @@ namespace RestaurantRaterAPI.Controllers
         }
 
         //Update(PUT)
+        [HttpPut]
+        public async Task<IHttpActionResult> UpdateRestaurant(int id, Restaurant updatedRestaurant)
+        {
+            if(ModelState.IsValid)
+            {
+                Restaurant restaurant = await _context.Restaurants.FindAsync(id);
+
+                if(restaurant != null)
+                {
+                    restaurant.Name = updatedRestaurant.Name; // updating values
+                    restaurant.Address = updatedRestaurant.Address;
+                    restaurant.Rating = updatedRestaurant.Rating; // then we have to make them stick (await)
+
+                    await _context.SaveChangesAsync();
+                    return Ok();
+                }
+                return NotFound(); //more specific ID not found
+            }
+            return BadRequest(ModelState); //never even look for if modelstate isn't right 
+        }
 
         //Delete
+        [HttpDelete]
+        public async Task<IHttpActionResult> DeleteRestaurant(int id)
+        {
+            Restaurant restaurant = await _context.Restaurants.FindAsync(id);
+
+            if (restaurant == null)
+            {
+                return NotFound();
+            }
+
+            _context.Restaurants.Remove(restaurant);
+
+            if (await _context.SaveChangesAsync() == 1)
+            {
+                return Ok("was successfully deleted");
+            }
+            return InternalServerError();
+        }
+
     }
 }
